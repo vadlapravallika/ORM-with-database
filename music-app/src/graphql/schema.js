@@ -1,35 +1,31 @@
 // src/graphql/schema.js
 
-const { buildSchema } = require('graphql');
+const { gql } = require('apollo-server-express');
 
-const schema = buildSchema(`
+const typeDefs = gql`
   type Artist {
-    id: Int
-    name: String
-    country: String
-    albums: [Album]
+    id: ID!
+    name: String!
+    # Add other fields as needed
   }
 
   type Album {
-    id: Int
-    title: String
-    releaseYear: Int
-    artist: Artist
-    songs: [Song]
+    id: ID!
+    title: String!
+    # Add other fields as needed
   }
 
   type Song {
-    id: Int
-    title: String
-    duration: Int
-    album: Album
+    id: ID!
+    title: String!
+    # Add other fields as needed
   }
 
   type Query {
-    artists: [Artist]
-    albums: [Album]
-    songs: [Song]
+    artists: [Artist!]!
+    albums: [Album!]!
+    songs: [Song!]!
   }
-`);
+`;
 
-module.exports = schema;
+module.exports = typeDefs;
