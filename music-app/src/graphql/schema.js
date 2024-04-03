@@ -22,9 +22,9 @@ const typeDefs = gql`
   }
 
   type Query {
-    artists: [Artist!]!
-    albums: [Album!]!
-    songs: [Song!]!
+    artists: [Artist]
+    albums: [Album]
+    songs: [Song]
   }
 `;
 

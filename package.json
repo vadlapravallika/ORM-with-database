@@ -4,5 +4,8 @@
   },
   "scripts": {
     "start": "node index.js"
+  },
+  "devDependencies": {
+    "prisma": "^5.12.0"
   }
 }
