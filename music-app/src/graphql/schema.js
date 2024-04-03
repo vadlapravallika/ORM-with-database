@@ -1,5 +1,3 @@
-// src/graphql/schema.js
-
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
@@ -12,12 +10,15 @@ const typeDefs = gql`
   type Album {
     id: ID!
     title: String!
+    artist: Artist! # Define the artist field
+    songs: [Song!]! # Define the songs field
     # Add other fields as needed
   }
 
   type Song {
     id: ID!
     title: String!
+    descripstion: String!
     # Add other fields as needed
   }
 
